@@ -46,6 +46,8 @@ class Singleton
             if(choice==1)
             {
                 Singleton singleton=Singleton.getinstance();
+                int address=singleton.hashCode();
+                LOGGER.log(Level.INFO,Integer.toString(address),address);
                 connresult=singleton.connection();
                 LOGGER.info(connresult);
             }
