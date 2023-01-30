@@ -29,6 +29,7 @@ class Singleton
     public static String close()
     {
         singleton=null;
+        flag=0;
         return "connection closed";
     }
     public static void main(String[] args)
