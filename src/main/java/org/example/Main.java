@@ -6,6 +6,7 @@ class Singleton
 {
     private static final Logger LOGGER=Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     private static Singleton singleton=null;
+    public static String a;
     private Singleton()
     {
 
@@ -21,7 +22,8 @@ class Singleton
     }
     public static String connection()
     {
-        return "connected";
+        a="connected";
+        return a;
     }
     public static String close()
     {
