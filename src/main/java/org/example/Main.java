@@ -21,7 +21,7 @@ class Singleton
     }
     public static String connection()
     {
-        return "Connected";
+        return "connected";
     }
     public static String close()
     {
