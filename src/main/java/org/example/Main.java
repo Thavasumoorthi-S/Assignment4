@@ -33,6 +33,7 @@ class Singleton
     public static void main(String[] args)
     {
         int choice;
+        String result;
         Scanner sc=new Scanner(System.in);
         while(true)
         {
@@ -46,7 +47,8 @@ class Singleton
             }
             else if(choice==2)
             {
-                LOGGER.log(Level.INFO,Singleton. close());
+                result=Singleton.close();
+                LOGGER.info(result);
             }
             else if(choice==3)
             {
