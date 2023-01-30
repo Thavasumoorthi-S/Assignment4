@@ -6,7 +6,7 @@ class Singleton
 {
     private static final Logger LOGGER=Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     private static Singleton singleton=null;
-    public String a;
+    String a;
     private static int flag=0;
     private Singleton()
     {
