@@ -19,7 +19,6 @@ class Singleton
             singleton=new Singleton();
             flag=1;
         }
-       // LOGGER.log(Level.INFO,Singleton.connection())
         return singleton;
     }
     public String connection()
