@@ -40,25 +40,25 @@ class Singleton
         Scanner sc=new Scanner(System.in);
         while(true)
         {
-            LOGGER.log(Level.INFO,"\n1)Connection make \n2)connection close \n3)exit");
-            LOGGER.log(Level.INFO,"Choose any one of the option in the above: ");
-            choice=sc.nextInt();
-            if(choice==1)
-            {
-                Singleton singleton=Singleton.getinstance();
-                int address=singleton.hashCode();
-                LOGGER.log(Level.INFO,Integer.toString(address),address);
-                connresult=singleton.connection();
-                LOGGER.info(connresult);
+            try {
+                LOGGER.log(Level.INFO, "\n1)Connection make \n2)connection close \n3)exit");
+                LOGGER.log(Level.INFO, "Choose any one of the option in the above: ");
+                choice = sc.nextInt();
+                if (choice == 1) {
+                    Singleton singleton = Singleton.getinstance();
+                    int address = singleton.hashCode();
+                    LOGGER.log(Level.INFO, Integer.toString(address), address);
+                    connresult = singleton.connection();
+                    LOGGER.info(connresult);
+                } else if (choice == 2) {
+                    result = Singleton.close();
+                    LOGGER.info(result);
+                } else if (choice == 3) {
+                    break;
+                }
             }
-            else if(choice==2)
-            {
-                result=Singleton.close();
-                LOGGER.info(result);
-            }
-            else if(choice==3)
-            {
-                break;
+            catch(InputMismatchException e){
+                throw new InputMismatchException("Please Enter the valid inpuit ");
             }
         }
     }
