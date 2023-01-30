@@ -6,7 +6,8 @@ class Singleton
 {
     private static final Logger LOGGER=Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     private static Singleton singleton=null;
-    public static String a;
+    public String a;
+    public static int flag=0;
     private Singleton()
     {
 
@@ -16,13 +17,14 @@ class Singleton
         if(singleton==null)
         {
             singleton=new Singleton();
+            flag=1;
         }
-        LOGGER.log(Level.INFO,Singleton.connection());
+       // LOGGER.log(Level.INFO,Singleton.connection())
         return singleton;
     }
-    public static String connection()
+    public String connection()
     {
-        a="connected";
+        a=(flag==1)?"connected":"not connected";
         return a;
     }
     public static String close()
@@ -34,6 +36,7 @@ class Singleton
     {
         int choice;
         String result;
+        String connresult;
         Scanner sc=new Scanner(System.in);
         while(true)
         {
@@ -43,6 +46,8 @@ class Singleton
             if(choice==1)
             {
                 Singleton singleton=Singleton.getinstance();
+                connresult=singleton.connection();
+                LOGGER.info(connresult);
             }
             else if(choice==2)
             {
