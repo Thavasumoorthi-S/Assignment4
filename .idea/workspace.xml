@@ -68,7 +68,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675059507980</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fouth c ommit">
+      <created>1675059662613</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675059662613</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fouth c ommit">
+      <created>1675059870092</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675059870092</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -43,7 +43,6 @@ class Singleton
             if(choice==1)
             {
                 Singleton singleton=Singleton.getinstance();
-                LOGGER.log(Level.INFO,"",singleton.hashCode());
             }
             else if(choice==2)
             {
