@@ -16,14 +16,14 @@ class Singleton
         {
             singleton=new Singleton();
         }
-        LOGGER.log(Level.INFO,Singleton.Connection());
+        LOGGER.log(Level.INFO,Singleton.connection());
         return singleton;
     }
-    public static String Connection()
+    public static String connection()
     {
         return "Connected";
     }
-    public static String Close()
+    public static String close()
     {
         Singleton singleton=null;
         return "connection closed";
@@ -44,7 +44,7 @@ class Singleton
             }
             else if(choice==2)
             {
-                LOGGER.log(Level.INFO,Singleton.Close());
+                LOGGER.log(Level.INFO,Singleton. close());
             }
             else if(choice==3)
             {
