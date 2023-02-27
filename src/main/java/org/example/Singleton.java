@@ -2,21 +2,21 @@ package org.example;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-class SingletonException
+class Singleton
 {
     private static final Logger LOGGER=Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-    private static SingletonException singleton=null;
+    private static Singleton singleton=null;
     String a;
     private static int flag=0;
-    private SingletonException()
+    private Singleton()
     {
 
     }
-    public static SingletonException getinstance()
+    public static Singleton getinstance()
     {
         if(singleton==null)
         {
-            singleton=new SingletonException();
+            singleton=new Singleton();
             flag=1;
         }
         return singleton;
@@ -44,13 +44,11 @@ class SingletonException
                 LOGGER.log(Level.INFO, "Choose any one of the option in the above: ");
                 choice = sc.nextInt();
                 if (choice == 1) {
-                    SingletonException singleton = SingletonException.getinstance();
-                    int address = singleton.hashCode();
-                    LOGGER.log(Level.INFO, Integer.toString(address), address);
+                    Singleton singleton = Singleton.getinstance();
                     connresult = singleton.connection();
                     LOGGER.info(connresult);
                 } else if (choice == 2) {
-                    result = SingletonException.close();
+                    result = Singleton.close();
                     LOGGER.info(result);
                 } else if (choice == 3) {
                     break;
